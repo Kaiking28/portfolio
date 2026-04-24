@@ -54,10 +54,43 @@ const projects = [
 ];
 
 const skillGroups: Record<string, string[]> = {
-  Languages: ['Python', 'R', 'SQL', 'JavaScript'],
-  'Libraries & ML': ['Pandas', 'Matplotlib', 'scikit-learn', 'statsmodels', 'Jupyter'],
-  'Tools & Platforms': ['Git', 'FRED API', 'Tableau', 'Power BI'],
+  'Programming': ['Python', 'R', 'SQL', 'Java', 'JavaScript', 'Oracle'],
+  'Data Science': ['Pandas', 'Matplotlib', 'Jupyter', 'Tableau', 'Power BI', 'Excel', 'Git'],
+  'Languages': ['English (Native)', 'Japanese (Conversational)'],
 };
+
+const activities = [
+  {
+    org: 'Northeastern University Fiscal Challenge Team',
+    role: 'Club Organizer & Team Co-Leader',
+    period: 'Jan 2026 – Present',
+    bullets: [
+      'Led team to 3rd place in National Finalist selection, presented in Washington DC among top teams nationwide',
+      'Organize meetings and deliver programming & economics workshops for 30+ member club',
+      'Spearhead economic modeling, statistical research, and policy analysis for the team',
+    ],
+  },
+  {
+    org: 'Northeastern Federal Reserve Challenge Team',
+    role: 'Presenter & Programmer',
+    period: 'Aug 2025 – Dec 2025',
+    bullets: [
+      'Chosen as part of 5-person team to present monetary policy findings to Boston Fed experts',
+      'Earned 3rd place finalist trophy out of 25 colleges at Boston Fed regional competition',
+      'Developed 15+ Python visualizations with Git and FRED API workflow as team programmer',
+    ],
+  },
+  {
+    org: 'Scouts of America',
+    role: 'Eagle Scout',
+    period: 'Sep 2021 – Dec 2024',
+    bullets: [
+      'Led construction of libraries for 8 Tokyo orphanages, managing logistics and coordinating dozens of volunteers',
+      'Conducted disaster relief projects assisting farmers following Tohoku tsunami',
+      'Attained Eagle Scout status in September 2023 with over 100 service hours',
+    ],
+  },
+];
 
 export default function Home() {
   return (
@@ -72,6 +105,7 @@ export default function Home() {
             <div className="hidden sm:flex gap-6 text-sm text-white/50">
               <a href="#projects" className="hover:text-white transition-colors">Projects</a>
               <a href="#gallery" className="hover:text-white transition-colors">Gallery</a>
+              <a href="#activities" className="hover:text-white transition-colors">Activities</a>
               <a href="#skills" className="hover:text-white transition-colors">Skills</a>
               <a href="#contact" className="hover:text-white transition-colors">Contact</a>
             </div>
@@ -104,7 +138,9 @@ export default function Home() {
                 </h1>
                 <p className="text-lg text-neutral-200 leading-relaxed mb-8">
                   Data Science &amp; Economics student at Northeastern University with experience in
-                  econometrics, machine learning, and policy analysis.
+                  statistical machine learning, econometrics, and fiscal policy analysis. National
+                  finalist at the Fiscal Policy Challenge and 3rd place at the Boston Federal Reserve
+                  Challenge. Eagle Scout with international service leadership experience.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a
@@ -183,6 +219,36 @@ export default function Home() {
         </section>
 
         <ProjectGallery />
+
+        {/* Activities */}
+        <section id="activities">
+          <SectionHeader title="Activities & Leadership" subtitle="Competitions, clubs, and service." />
+          <div className="bg-white dark:bg-neutral-950">
+            <div className="max-w-5xl mx-auto px-6 py-12">
+              <div className="flex flex-col gap-8">
+                {activities.map((a) => (
+                  <div key={a.org} className="border-l-2 border-black dark:border-white pl-6">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-3">
+                      <div>
+                        <h3 className="font-semibold text-black dark:text-white">{a.org}</h3>
+                        <p className="text-sm text-neutral-500 dark:text-neutral-400">{a.role}</p>
+                      </div>
+                      <span className="text-xs font-mono text-neutral-400 shrink-0">{a.period}</span>
+                    </div>
+                    <ul className="flex flex-col gap-1.5">
+                      {a.bullets.map((b) => (
+                        <li key={b} className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed flex gap-2">
+                          <span className="text-neutral-300 dark:text-neutral-600 mt-1">–</span>
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Skills */}
         <section id="skills">
