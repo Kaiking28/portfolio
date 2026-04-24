@@ -62,32 +62,22 @@ const skillGroups: Record<string, string[]> = {
 const activities = [
   {
     org: 'Northeastern University Fiscal Challenge Team',
-    role: 'Club Organizer & Team Co-Leader',
+    role: 'Programmer & Co-Leader',
     period: 'Jan 2026 – Present',
     bullets: [
-      'Led team to 3rd place in National Finalist selection, presented in Washington DC among top teams nationwide',
+      'Led team to 3rd place in National Finalist champion, presented in Washington DC among top teams nationwide',
       'Organize meetings and deliver programming & economics workshops for 30+ member club',
       'Spearhead economic modeling, statistical research, and policy analysis for the team',
     ],
   },
   {
     org: 'Northeastern Federal Reserve Challenge Team',
-    role: 'Presenter & Programmer',
+    role: 'Programmer & Co-Leader',
     period: 'Aug 2025 – Dec 2025',
     bullets: [
       'Chosen as part of 5-person team to present monetary policy findings to Boston Fed experts',
       'Earned 3rd place finalist trophy out of 25 colleges at Boston Fed regional competition',
       'Developed 15+ Python visualizations with Git and FRED API workflow as team programmer',
-    ],
-  },
-  {
-    org: 'Scouts of America',
-    role: 'Eagle Scout',
-    period: 'Sep 2021 – Dec 2024',
-    bullets: [
-      'Led construction of libraries for 8 Tokyo orphanages, managing logistics and coordinating dozens of volunteers',
-      'Conducted disaster relief projects assisting farmers following Tohoku tsunami',
-      'Attained Eagle Scout status in September 2023 with over 100 service hours',
     ],
   },
 ];
@@ -137,10 +127,10 @@ export default function Home() {
                   Kai Kagawa King
                 </h1>
                 <p className="text-lg text-neutral-200 leading-relaxed mb-8">
-                  Data Science &amp; Economics student at Northeastern University with experience in
-                  statistical machine learning, econometrics, and fiscal policy analysis. National
-                  finalist at the Fiscal Policy Challenge and 3rd place at the Boston Federal Reserve
-                  Challenge. Eagle Scout with international service leadership experience.
+                  Data Science &amp; Economics student with a minor in mathematics at Northeastern University with experience in
+                  statistical machine learning, econometrics, and fiscal policy analysis. Interested in bridging the gap between
+                  economics and computer science. Most recently earned 3rd place champion at the national Fiscal Policy Challenge
+                  and Boston Federal Reserve Challenge.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a
